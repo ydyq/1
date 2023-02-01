@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="chinese">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex布局</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background-color: aliceblue;
+        }
+
+        * {
+            border: 1px solidblack;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .baise {
+            background-color: white;
+        }
+
+        .flex1 {
+            flex: 1;
+        }
+
+        .column {
+            flex-direction: column;
+        }
+
+        .m {
+            margin: 8px;
+        }
+
+        .m2 {
+            margin-right: 8px;
+        }
+
+        .m3 {
+            margin-top: 8px;
+        }
+
+        .m4 {
+            margin-left: 8px;
+        }
+
+        .yinying {
+            box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5);
+        }
+
+        .daohang {
+            padding: 10px 20px;
+            border-bottom: 1px solid rgb(186, 185, 185);
+            font-size: 20px;
+            color: #666
+        }
+
+        .x {
+            font-size: 25px;
+        }
+
+        .tj {
+            text-align: center;
+        }
+
+        @media(max-width:600px) {
+            .cbl {
+                display: none;
+            }
+
+            .nr {
+                flex-direction: column;
+            }
+
+            .sj {
+                flex-direction: column;
+            }
+
+            .yq {
+                margin-left: 8px;
+            }
+
+            .sk {
+                margin: 0 0 8px;
+                flex: auto;
+            }
+
+        }
+    </style>
+</head>
+
+<body class="flex"></body>
+<!--侧边栏-->
+<div style="width: 200px;z-index: 2;" class="cbl baise yinying ">
+    <!--头像栏-->
+    <div style="padding:10px;align-items:center;justify-content:center;border-bottom:1px solid #999" class="flex">
+        <img src="https://img9.51tietu.net/pic/20190918/p0iwg2kzx13p0iwg2kzx13" width="80px" height="80px" alt="" />
+        <div style="margin-left:10px" class="x">杨栋的个人网站</div>
+    </div>
+    <!--导航栏-->
+    <div class="flex1">
+        <div class="daohang"><a href="D:\桌面\新建文件夹\index.html（2）">这是第二页</a></div>
+        <div class="daohang">导航</div>
+        <div class="daohang">导航</div>
+        <div class="daohang">导航</div>
+        <div class="daohang">导航</div>
+
+    </div>
+</div>
+<!--主区域-->
+<div class="flex1 flex column">
+    <!--头部栏-->
+    <div style="height:80px;z-index: 1;" class="baise yingying m4"></div>
+    <div class="daohang tj">杨栋的个人网站</div>
+    <!--内容区-->
+    <div style="overflow:auto;" class="nr flex1 flex">
+        <!--左区-->
+        <div style="flex:3" class="flex column m">
+            <!--数据区-->
+            <div class="sj flex m">
+                <!--数据块-->
+                <div style="height:120px" class="sk flex1 baise m2 yinying"></div>
+                <div style="height:120px" class="sk flex1 baise m2 yinying"></div>
+                <div style="height:120px" class="sk flex1 baise m2 yinying"></div>
+                <div style="height:120px" class="sk flex1 baise yinying"></div>
+            </div>
+            <!--列表区-->
+            <div class="flex column">
+                <!--列表项-->
+                <div style="height:160px" class="baise m3 yinying"></div>
+                <div style="height:160px" class="baise m3 yinying"></div>
+                <div style="height:160px" class="baise m3 yinying"></div>
+                <div style="height:160px" class="baise m3 yinying"></div>
+                <div style="height:160px" class="baise m3 yinying"></div>
+                <div style="height:160px" class="baise m3 yinying"></div>
+            </div>
+        </div>
+        <!--右区-->
+        <div style="flex:1" class="yq flex column m ">
+            <!--提示区-->
+            <div style="height:150px" class="baise yinying"></div>
+            <!--消息区-->
+            <div style="height:300px" class="baise m3 yinying"></div>
+        </div>
+    </div>
+    </body>
+
+</html>
